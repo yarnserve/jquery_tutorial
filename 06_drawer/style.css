@@ -9,12 +9,17 @@ body {
 .side {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -300px;
   width: 300px;
   height: 100vh;
   background-color: #fff;
   padding: 36px;
   text-align: center;
+  transition: all 0.3s;
+}
+
+.active {
+  right: 0;
 }
 
 .banner {
