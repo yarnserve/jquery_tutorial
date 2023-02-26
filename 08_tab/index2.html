@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery-tab</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="./style2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>tab 2</h1>
+
+      <section>
+        <ul class="tab">
+          <li><a href="#x">tab 1</a></li>
+          <li><a href="#x">tab 2</a></li>
+          <li><a href="#x">tab 3</a></li>
+        </ul>
+
+        <div class="content">
+          가슴속에 밤이 때 어머니 계십니다. 않은 하늘에는 새워 가슴속에 사람들의
+          그러나 그리워 같이 오는 있습니다. 우는 쉬이 아름다운 잔디가 비둘기,
+          잠, 것은 거외다. 가을 까닭이요, 하늘에는 잔디가 없이 다하지 부끄러운
+          밤을 듯합니다. 언덕 써 된 릴케 듯합니다. 오는 릴케 쉬이 까닭입니다. 때
+          하나에 새워 듯합니다. 나는 시와 어머니 이름과, 불러 까닭입니다. 옥
+          가을로 다 청춘이 이런 차 있습니다.
+        </div>
+        <div class="content">
+          않은 이름을 흙으로 봅니다. 하나에 하나에 비둘기, 잔디가 까닭입니다.
+          하나에 새겨지는 이름과, 나는 차 하나에 라이너 걱정도 마디씩
+          까닭입니다. 아무 강아지, 시와 책상을 이름을 멀듯이, 봅니다. 했던 없이
+          때 까닭입니다. 하늘에는 것은 잔디가 다 토끼, 같이 못 내린 아직
+          버리었습니다. 겨울이 나는 속의 버리었습니다. 같이 그리고 마디씩
+          강아지, 소녀들의 못 나의 까닭입니다. 노새, 가난한 프랑시스 비둘기,
+          있습니다. 별에도 내일 경, 사람들의 쉬이 북간도에 거외다.
+        </div>
+        <div class="content">
+          된 겨울이 하나의 위에도 동경과 거외다. 청춘이 이름과, 하나에 어머니
+          거외다. 애기 지나고 속의 된 내 걱정도 잠, 피어나듯이 봅니다. 어머니
+          무덤 그리워 소녀들의 내린 많은 이런 못 봅니다. 동경과 하나에 쓸쓸함과
+          했던 많은 같이 별 이름과, 슬퍼하는 봅니다. 밤을 별 계절이 묻힌
+          무엇인지 내 추억과 덮어 봄이 봅니다. 걱정도 이 우는 패, 비둘기,
+          있습니다. 위에 멀리 딴은 많은 마디씩 봅니다. 시인의 이름과, 없이 별
+          오면 파란 묻힌 헤일 이제 거외다. 프랑시스 별빛이 다하지 까닭입니다.
+        </div>
+      </section>
+    </div>
+
+    <script>
+      var btns = $('.tab li')
+      var contents = $('.content')
+
+      btns.eq(0).addClass('active')
+      contents.hide().eq(0).show()
+
+      btns.click(function () {
+        btns.removeClass('active')
+        $(this).addClass('active')
+
+        contents.hide()
+        contents.eq($(this).index()).show()
+      })
+    </script>
+  </body>
+</html>
