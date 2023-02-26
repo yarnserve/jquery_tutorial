@@ -1,0 +1,49 @@
+img {
+  width: 100%;
+  display: block;
+}
+
+.photo {
+  position: relative;
+}
+
+.card {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.sns {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 16px;
+  left: 16px;
+  color: #fff;
+}
+
+.sns i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.sns i:first-child {
+  background-color: deeppink;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.info {
+  padding: 20px;
+  background-color: #ddd;
+}
+
+info h2 {
+  margin-bottom: 12px;
+}
