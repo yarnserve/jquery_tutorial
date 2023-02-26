@@ -19,3 +19,8 @@ h1 {
 button {
   padding: 4px 8px;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}

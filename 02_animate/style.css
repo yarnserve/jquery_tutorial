@@ -1,0 +1,28 @@
+.main {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 10px 0;
+  position: relative;
+}
+
+.box1 {
+  background-color: orangered;
+}
+.box2 {
+  background-color: blue;
+}
+.box3 {
+  background-color: green;
+}
+.box4 {
+  background-color: gray;
+}
+
+.btns {
+  margin-top: 20px;
+}

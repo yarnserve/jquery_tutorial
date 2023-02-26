@@ -1,0 +1,37 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.cards li img {
+  width: 100%;
+  display: block;
+}
+
+.cards li {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cards li p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0 16px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  opacity: 0;
+}
+
+.cards li:nth-child(1) p {
+  bottom: -50px;
+}
+
+.cards li:nth-child(3) p {
+  left: -100%;
+}
