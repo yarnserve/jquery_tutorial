@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery-accordion</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>accordion</h1>
+
+      <div class="accordion">
+        <h2>This is title 1</h2>
+        <p class="content">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, quod
+          maiores nostrum dolorum illum, excepturi, magni aut ipsum quasi itaque
+          earum cum vero quas architecto pariatur libero voluptas? Obcaecati,
+          doloribus.
+        </p>
+
+        <h2>This is title 2</h2>
+        <p class="content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam
+          itaque amet dolorem fugit vitae laboriosam illo, dolores deserunt
+          temporibus provident sunt consequuntur omnis voluptates, harum a velit
+          neque vero necessitatibus obcaecati impedit non totam adipisci
+          officia. Tempore iure magnam, animi similique esse delectus
+          perspiciatis ea quo, quasi placeat reiciendis quaerat velit nam vitae
+          laborum dolore neque hic quas? Dolore natus velit asperiores eligendi,
+          at sed! Tenetur ratione magnam ipsam illum! Magnam sunt asperiores
+          necessitatibus cumque illum similique, quas dolore maiores corrupti
+          quibusdam quasi odio reprehenderit vel recusandae accusantium culpa
+          voluptas, numquam dolorem inventore perferendis quis perspiciatis
+          ipsum! Assumenda, in sequi.
+        </p>
+
+        <h2>This is title 3</h2>
+        <p class="content">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, quod
+          maiores nostrum dolorum illum, excepturi, magni aut ipsum quasi itaque
+          earum cum vero quas architecto pariatur libero voluptas? Obcaecati,
+          doloribus.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      var title = $('.accordion h2')
+      var content = $('.content')
+
+      title.eq(0).addClass('active')
+      content.eq(0).slideDown()
+
+      title.click(function () {
+        $(this).toggleClass('active')
+        $(this).next().slideToggle()
+      })
+    </script>
+  </body>
+</html>

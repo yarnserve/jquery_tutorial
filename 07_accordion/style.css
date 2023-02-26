@@ -1,0 +1,35 @@
+.accordion {
+  width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  background-color: #ddd;
+  padding: 12px;
+  margin: 4px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #330;
+  border-bottom: 2px solid #333;
+  transform: rotate(-45deg);
+  transition: all 0.2s;
+}
+
+h2.active::after {
+  transform: rotate(45deg);
+}
+
+.content {
+  background: #eee;
+  padding: 1rem;
+  display: none;
+}
