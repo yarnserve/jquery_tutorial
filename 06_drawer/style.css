@@ -1,0 +1,47 @@
+body {
+  background-color: #ddd;
+}
+
+.container {
+  max-width: 100% !important;
+}
+
+.side {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  padding: 36px;
+  text-align: center;
+}
+
+.banner {
+  height: 100px;
+  background-color: #eee;
+  margin: 10px 0;
+}
+
+ul {
+  margin: 16px 0;
+}
+
+ul li {
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
