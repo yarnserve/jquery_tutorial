@@ -29,8 +29,25 @@
       </ul>
 
       <div class="dimm">
-        <img src="../images/img_01_b.jpg" alt="" />
+        <img src="" alt="" />
       </div>
     </div>
+
+    <script>
+      var items = $('.cards li')
+      var dimm = $('.dimm')
+      var dimmImg = dimm.find('img')
+
+      items.click(function () {
+        var dataImg = $(this).find('img').attr('data-img')
+        console.log(dataImg)
+        dimm.addClass('show')
+        dimmImg.attr('src', dataImg)
+
+        dimm.click(function () {
+          $(this).removeClass('show')
+        })
+      })
+    </script>
   </body>
 </html>
