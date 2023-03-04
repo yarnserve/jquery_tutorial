@@ -26,11 +26,44 @@
 
     <script>
       var items = $('.item')
+      var width = 800
+      var interval = 2000
+      var speed = 1000
+      var slide = $('.slide')
+      var currentIndex = 1
+      var timer
+
+      function start() {
+        timer = setInterval(function () {
+          slide.animate({ marginLeft: '-=' + width }, speed, function () {
+            currentIndex++
+            if (currentIndex === items.length + 1) {
+              currentIndex = 1
+              slide.css('marginLeft', 0)
+            }
+          })
+        }, interval)
+      }
+
+      function stop() {
+        clearInterval(timer)
+      }
 
       function init() {
+        var addItem = items
+          .eq(0)
+          .clone()
+          .css('left', items.length * width)
+
+        slide.append(addItem)
+
         items.each(function (index) {
-          console.log(index)
+          $(items[index]).css('left', index * width)
         })
+
+        start()
+
+        slide.hover(stop, start)
       }
 
       init()
