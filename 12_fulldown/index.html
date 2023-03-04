@@ -134,15 +134,19 @@
           </p>
         </section>
       </div>
+
+      <div class="dimm"></div>
     </div>
 
     <script>
       $('.gnb').hover(
         function () {
-          $(this).stop().animate({ height: 360 }, 'fast')
+          $(this).stop().animate({ height: 360 }, 300)
+          $('.dimm').addClass('on')
         },
         function () {
-          $(this).stop().animate({ height: 80 }, 'fast')
+          $(this).stop().animate({ height: 80 }, 300)
+          $('.dimm').removeClass('on')
         }
       )
     </script>

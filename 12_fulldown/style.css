@@ -9,6 +9,7 @@ header {
   width: 100%;
   height: 80px;
   transition: all 0.3s;
+  z-index: 1;
 }
 
 header.active {
@@ -34,6 +35,7 @@ nav::after {
   width: 100%;
   height: 1px;
   background-color: #ddd;
+  pointer-events: none;
 }
 
 .logo {
@@ -61,6 +63,10 @@ nav button {
   line-height: 80px;
   padding: 0 70px;
   font-weight: bold;
+}
+
+.gnb > li:hover > a {
+  color: orangered;
 }
 
 .gnb ul {
@@ -96,4 +102,20 @@ nav button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.dimm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  opacity: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.dimm.on {
+  opacity: 1;
 }
