@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery-fade</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>auto fade</h1>
+      <ul class="slide">
+        <li class="item"><img src="../images/img_01.jpg" alt="" /></li>
+        <li class="item"><img src="../images/img_02.jpg" alt="" /></li>
+        <li class="item"><img src="../images/img_03.jpg" alt="" /></li>
+        <li class="item"><img src="../images/img_04.jpg" alt="" /></li>
+      </ul>
+    </div>
+
+    <script>
+      var items = $('.item')
+      var currentIndex = 0
+      var interval = 1000
+      var timer
+
+      function play() {
+        timer = setInterval(function () {
+          var nextIndex = (currentIndex + 1) % items.length
+          items.eq(currentIndex).fadeOut()
+          items.eq(nextIndex).fadeIn()
+          currentIndex = nextIndex
+        }, interval)
+      }
+
+      function stop() {
+        clearInterval(timer)
+      }
+
+      function init() {
+        items.eq(currentIndex).show()
+        play()
+        items.hover(stop, play)
+      }
+
+      init()
+    </script>
+  </body>
+</html>
