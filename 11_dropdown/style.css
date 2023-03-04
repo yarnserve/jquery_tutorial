@@ -1,0 +1,26 @@
+.container {
+  max-width: 100%;
+}
+
+header {
+}
+
+nav {
+  max-width: 1200px;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.gnb li {
+  display: inline-block;
+}
+
+.gnb ul {
+  display: none;
+}
