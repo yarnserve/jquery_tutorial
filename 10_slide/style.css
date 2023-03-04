@@ -1,0 +1,22 @@
+.slider {
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.slide {
+  position: relative;
+}
+
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 800px;
+  height: 500px;
+}
+
+.item img {
+  width: 100%;
+  display: block;
+}
