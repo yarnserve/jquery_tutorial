@@ -70,7 +70,10 @@
       list.find('li').slice(0, 8).show()
 
       btn.click(function () {
-        //
+        list.find('li:hidden').slice(0, 8).fadeIn()
+        if (list.find('li:hidden').length <= 0) {
+          btn.hide()
+        }
       })
     </script>
   </body>
