@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery-view more</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>view more</h1>
+
+      <div class="main">
+        <ul class="list">
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+          <li>내용</li>
+        </ul>
+
+        <button id="btn">더보기</button>
+      </div>
+    </div>
+
+    <script>
+      var list = $('.list')
+      var btn = $('#btn')
+
+      list.find('li').slice(0, 8).show()
+
+      btn.click(function () {
+        //
+      })
+    </script>
+  </body>
+</html>
