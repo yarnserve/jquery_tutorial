@@ -36,7 +36,7 @@ header {
 }
 
 .slide_01 .item {
-  height: 600px;
+  height: 650px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -52,15 +52,6 @@ header {
   background-image: url('../images/slide_03.jpg');
 }
 
-.slide_text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 45%;
-}
-
 .arrow {
   position: absolute;
   top: 50%;
@@ -70,4 +61,127 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 0 30px;
+  pointer-events: none;
+}
+
+.arrow img {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s;
+  pointer-events: initial;
+}
+
+.arrow img:hover {
+  opacity: 1;
+}
+
+.slide_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 45%;
+}
+
+.slide_text .title {
+  font-size: 60px;
+  font-weight: bold;
+  animation: ani_scale 0.5s forwards;
+}
+
+.slide_text i {
+  margin: 36px 0;
+  font-size: 36px;
+  opacity: 0;
+  animation: ani_rotate 0.5s 0.8s forwards;
+}
+
+.slide_text .info {
+  position: relative;
+  line-height: 1.6;
+  margin-bottom: 36px;
+  opacity: 0;
+  animation: ani_top_bottom 0.5s 0.8s forwards;
+}
+
+.slide_text .btn {
+  position: relative;
+  background-color: rgb(0, 126, 251);
+  color: #fff;
+  font-size: 12px;
+  padding: 16px 32px;
+  border-radius: 6px;
+  opacity: 0;
+  animation: ani_bottom_top 0.5s 0.8s forwards;
+}
+
+@keyframes ani_bottom_top {
+  0% {
+    opacity: 0;
+    top: 20px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes ani_top_bottom {
+  0% {
+    opacity: 0;
+    top: -20px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes ani_rotate {
+  0% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes ani_scale {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* slick-dots */
+.slide_01 .slick-dots {
+  bottom: 20px;
+}
+
+.slide_01 .slick-dots li {
+  width: 30px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.3s;
+}
+
+.slide_01 .slick-dots li.slick-active {
+  width: 100px;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.slide_01 .slick-dots li button::before {
+  font-size: 0;
 }

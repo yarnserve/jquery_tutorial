@@ -1,18 +1,13 @@
-# 안영하세요
+# jquery tutorial
 
-## 반가위요
+### magnific popup
 
-### 더 작은 글자가 됩니다.
+https://dimsemenov.com/plugins/magnific-popup/
 
-ㄹㄹㄹㄹㄹ  
-ㄻㄴㅇㄹㄴㅁ  
-ㅁㄴㅇㄻㄴ  
-ㅇㄹ
+### slick slide
 
-```
-var headerClone = $('header').contents().clone()
-      var header2 = $('<header class="header2"></header>')
+https://kenwheeler.github.io/slick/
 
-      header2.append(headerClone)
-      header2.prependTo('.main')
-```
+### scroll reveal
+
+https://scrollrevealjs.org/
