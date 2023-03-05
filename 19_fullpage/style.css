@@ -1,0 +1,53 @@
+body {
+  background-color: #eee;
+}
+
+.section {
+  text-align: center;
+}
+
+.header {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  font-size: 32px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  transition: left 0.3s;
+}
+
+.nav.active {
+  left: 0;
+}
+
+.nav li {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.nav a {
+  display: block;
+  font-size: 20px;
+  padding: 20px 10px;
+  border-bottom: 1px solid #ddd;
+  color: #666;
+}
+
+.nav a.active {
+  color: #000;
+  font-weight: bold;
+}
