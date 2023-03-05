@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>magnific popup</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./lib/magnific-popup.css" />
+    <script src="./lib/jquery.magnific-popup.js"></script>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js"></script>
   </head>
   <body>
     <div class="container">
@@ -12,9 +19,9 @@
 
       <div class="main">
         <div class="btns">
-          <button>open modal</button>
-          <button>open youtube</button>
-          <button>load ajax</button>
+          <a class="popup-modal" href="#test-modal">open modal</a>
+          <a href="">open youtube</a>
+          <a href="">load ajax</a>
         </div>
 
         <p>Single image lightbox</p>
@@ -34,7 +41,7 @@
         </div>
       </div>
 
-      <div class="modal">
+      <div class="modal mfp-hide white-popup-block" id="test-modal">
         <h2>Modal</h2>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda,
@@ -42,7 +49,7 @@
           sit magni nihil. Nobis magni minus non facilis modi temporibus,
           aliquam atque dolorem.
         </p>
-        <a href="#x">close</a>
+        <a href="#x" class="popup-modal-dismiss">close</a>
       </div>
     </div>
   </body>
